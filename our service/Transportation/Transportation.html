@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="./connestors.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>دليلك - خدمات المواصلات</title>
+    <style>
+        /* تأثيرات hover على الخدمات */
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* زر العودة إلى الأعلى */
+        
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- الشعار -->
+        <div class="logo">
+            <h1><span>Da</span><span>lilak</span></h1>
+        </div>
+
+        <!-- حقل البحث -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for service...">
+            <span class="search-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
+                </svg>
+            </span>
+        </div>
+        <!-- قائمة الخدمات -->
+        <div class="services-grid">
+            <h2 class="inline-section-title">cars</h2>
+            <!-- أوبر -->
+            <div class="service-card">
+                <img src="./المواصلات/اوبر.png" alt="Uber">
+                <h2>Uber</h2>
+                <a href="https://www.uber.com/eg/ar/" class="service-link">click</a>
+                <div class="service-info"> Cairo, Giza, Alexandria</div>
+            </div>
+            <!-- كريم -->
+            <div class="service-card">
+                <img src="./المواصلات/كريم.png" alt="كريم">
+                <h2>Careem</h2>
+                <a href="https://www.careem.com/" class="service-link">click</a>
+                <div class="service-info">Cairo, Giza, Alexandria</div>
+            </div>
+            <!-- سويفل -->
+            <div class="service-card">
+                <img src="./المواصلات/سويفل.png" alt="سويفل">
+                <h2>Swvl</h2>
+                <a href="https://www.swvl.com/" class="service-link">click</a>
+                <div class="service-info"> Cairo and Giza</div>
+            </div>
+            <!-- وصلني-->
+            <div class="service-card">
+                <img src="./المواصلات/وصلني.webp" alt="وصلني">
+                <h2>wasalny</h2>
+                <a href="https://wasalni-com.ar.uptodown.com/android" class="service-link">click</a>
+                <div class="service-info">Cairo Alexandria Tanta Mansoura</div>
+            </div>
+            <!-- بولت -->
+            <div class="service-card">
+                <img src="./المواصلات/بولت.jpg" alt="بولت">
+                <h2>Bolt</h2>
+                <a href="https://bolt.eu/ar-eg/" class="service-link">click</a>
+                <div class="service-info"> Cairo, Giza, Alexandria</div>
+            </div>
+            <!-- كوريا - Kakao T -->
+            <div class="service-card ">
+                <img src="./المواصلات/Kakao_T_logo.png " alt="Kakao T ">
+                <h2>Kakao T</h2>
+                <a href="https://www.kakaomobility.com/ " class="service-link ">click </a>
+                <div class="service-info ">Seoul and other cities</div>
+            </div>
+            <!-- روسيا - Yandex Taxi -->
+            <div class="service-card ">
+                <img src="./المواصلات/1631341120853.jpeg " alt="Yandex Taxi ">
+                <h2>Yandex Taxi</h2>
+                <a href="https://taxi.yandex.com/ " class="service-link "> click</a>
+                <div class="service-info ">Moscow, St. Petersburg, and other cities</div>
+            </div>
+            <!-- إيطاليا - MyTaxi -->
+            <div class="service-card ">
+                <img src="./المواصلات/unnamed.png " alt="MyTaxi ">
+                <h2>MyTaxi</h2>
+                <a href="https://www.mytaxi.com/ " class="service-link ">click</a>
+                <div class="service-info ">Rome, Milan, and other cities</div>
+            </div>
+            <!-- زووم كار -->
+            <div class="service-card">
+                <img src="./المواصلات/زووم كار .png" alt="زووم كار">
+                <h2> Zoomcar</h2>
+                <a href="https://www.zoomcar.com/in/host/en/bangalore" class="service-link">click</a>
+                <div class="service-info"> Cairo and Giza</div>
+            </div>
+            <!-- ديدي -->
+            <div class="service-card">
+                <img src="./المواصلات/ديدي .png" alt="ديدي">
+                <h2>DiDi</h2>
+                <a href="https://web.didiglobal.com/eg/" class="service-link">click</a>
+                <div class="service-info"> Cairo and Giza</div>
+            </div>
+            <!-- InDriver -->
+            <div class="service-card">
+                <img src="./المواصلات/InDriver.png" alt="InDriver">
+                <h2> InDriver</h2>
+                <a href="https://indrive.com/" class="service-link">click</a>
+                <div class="service-info"> Cairo and Giza .and some other governorates</div>
+            </div>
+            <!-- تركيا - BiTaksi -->
+            <div class="service-card">
+                <img src="./المواصلات/bitaksi.jpeg" alt="BiTaksi">
+                <h2>BiTaksi</h2>
+                <a href="https://www.bitaksi.com/" class="service-link">click</a>
+                <div class="service-info"> Istanbul and Ankara</div>
+            </div>
+            <!-- أمريكا - Uber -->
+            <div class="service-card">
+                <img src="./المواصلات/7f20cab1-4508-4838-8ca0-b3e8736bb224.jpeg " alt=" Uber ">
+                <h2>Uber</h2>
+                <a href="https://www.uber.com/ " class="service-link ">Uber</a>
+                <div class="service-info ">all major US cities</div>
+            </div>
+            <!-- الصين - DiDi Chuxing -->
+            <div class="service-card ">
+                <img src="./المواصلات/didi.jpeg" alt="DiDi Chuxing ">
+                <h2>DiDi Chuxing</h2>
+                <a href="https://www.didiglobal.com/ " class="service-link ">click </a>
+                <div class="service-info "> Beijing, Shanghai, and other cities</div>
+            </div>
+            <!-- نيجيريا - Bolt -->
+            <div class="service-card ">
+                <img src="./المواصلات/images.png" alt="Bolt ">
+                <h2>Bolt</h2>
+                <a href="https://bolt.eu/en-ng/ " class="service-link ">click</a>
+                <div class="service-info ">Lagos, Abuja, and other cities</div>
+            </div>
+            <!-- فرنسا - SNCF -->
+            <div class="service-card ">
+                <img src="./المواصلات/maxresdefault.jpg " alt="SNCF ">
+                <h2>SNCF</h2>
+                <a href="https://www.sncf.com/ " class="service-link ">click</a>
+                <div class="service-info ">Available across France</div>
+            </div>
+            <!-- تونس - Bolt (العربيات) -->
+            <div class="service-card">
+                <img src="./المواصلات/بولت.jpg" alt="Bolt">
+                <h2>Bolt</h2>
+                <a href="https://bolt.eu/ar-tn/" class="service-link">click</a>
+                <div class="service-info"> Tunis and other cities</div>
+            </div>
+            <!-- السعودية - Careem (العربيات) -->
+            <div class="service-card">
+                <img src="./المواصلات/كريم.png" alt="Careem">
+                <h2>Careem</h2>
+                <a href="https://www.careem.com/" class="service-link">click</a>
+                <div class="service-info"> Riyadh, Jeddah, and other cities</div>
+            </div>
+
+
+            <h2 class="inline-section-title">Trains/Public Transport:</h2>
+            <!-- تركيا - TCDD (القطارات) -->
+            <div class="service-card ">
+                <img src="./المواصلات/395392084_653612136954780_3145673642847781375_n.jpg" alt="TCDD ">
+                <h2>TCDD</h2>
+                <a href=" https://www.tcddvsepet.com.tr/?srsltid=AfmBOopRilug7tATRZVpCVbxOCZVJoPeX7VUpWwk57JQYKbuBsGWmWiX" class="service-link ">TCDD</a>
+                <div class="service-info "> Turkey</div>
+            </div>
+            <!-- فرنسا - TGV (القطارات) -->
+            <div class="service-card ">
+                <img src="./المواصلات/images.jpeg" alt="TGV ">
+                <h2>TGV</h2>
+                <a href="https://www.sncf.com/ " class="service-link ">click</a>
+                <div class="service-info "> France</div>
+            </div>
+            <!-- تونس - SNCFT (القطارات) -->
+            <div class="service-card">
+                <img src="./المواصلات/images (11).jpeg" alt="SNCFT">
+                <h2>SNCFT</h2>
+                <a href="https://www.sncft.com.tn/" class="service-link">click</a>
+                <div class="service-info"> Tunisia</div>
+            </div>
+            <!-- ألمانيا - ICE (القطارات) -->
+            <div class="service-card ">
+                <img src="./المواصلات/Deutsche-Bahn.jpg " alt="ICE ">
+                <h2>ICE</h2>
+                <a href="https://www.bahn.com/ " class="service-link ">click</a>
+                <div class="service-info ">Germany</div>
+            </div>
+            <!-- أمريكا - Amtrak (القطارات) -->
+            <div class="service-card ">
+                <img src="./المواصلات/business-class-routes-list.png" alt="Amtrak ">
+                <h2>Amtrak</h2>
+                <a href="https://www.amtrak.com/ " class="service-link ">click</a>
+                <div class="service-info "> the USA</div>
+            </div>
+            <!-- الصين - China Railway -->
+            <div class="service-card ">
+                <img src="./المواصلات/9.jpg" alt="China Railway ">
+                <h2>China Railway</h2>
+                <a href="https://www.12306.cn/ " class="service-link "> click</a>
+                <div class="service-info "> China</div>
+            </div>
+            <!-- السعودية - SAR (القطارات) -->
+            <div class="service-card">
+                <img src="./المواصلات/888.png" alt="SAR">
+                <h2>SAR</h2>
+                <a href="https://www.sar.com.sa/" class="service-link">click</a>
+                <div class="service-info"> Saudi Arabia</div>
+            </div>
+            <!-- إيطاليا - Trenitalia -->
+            <div class="service-card ">
+                <img src="./المواصلات/images (5).png " alt="Trenitalia ">
+                <h2>Trenitalia</h2>
+                <a href="https://www.trenitalia.com/ " class="service-link ">click</a>
+                <div class="service-info "> Italy</div>
+            </div>
+            <!-- كوريا - KTX (القطارات) -->
+            <div class="service-card ">
+                <img src="./المواصلات/12.png " alt="KTX ">
+                <h2>KTX</h2>
+                <a href="https://www.letskorail.com/ " class="service-link ">click</a>
+                <div class="service-info "> South Korea</div>
+            </div>
+            <!-- نيجيريا - Nigerian Railways -->
+            <div class="service-card ">
+                <img src="./المواصلات/NRC.png " alt="Nigerian Railways ">
+                <h2>Nigerian Railways</h2>
+                <a href="https://www.nrc.gov.ng/ " class="service-link "> click</a>
+                <div class="service-info "> Nigeria</div>
+            </div>
+            <!-- مصر - Egyptian National Railways -->
+            <div class="service-card ">
+                <img src="./المواصلات/ENR_Logo1.png " alt="Egyptian National Railways ">
+                <h2>Egyptian National Railways</h2>
+                <a href="https://www.enr.gov.eg/ " class="service-link "> click</a>
+                <div class="service-info "> Egypt</div>
+            </div>
+            <!-- دبي - Dubai Metro -->
+            <div class="service-card ">
+                <img src="./المواصلات/Dubai_Metro_Logo.png" alt="Dubai Metro ">
+                <h2>Dubai Metro</h2>
+                <a href="https://www.rta.ae/ " class="service-link "> click</a>
+                <div class="service-info ">Dubai</div>
+            </div>
+            <!-- ألمانيا - Deutsche Bahn -->
+            <div class="service-card ">
+                <img src="./المواصلات/Deutsche-Bahn.jpg " alt="Deutsche Bahn ">
+                <h2>Deutsche Bahn</h2>
+                <a href="https://www.bahn.com/ " class="service-link ">click </a>
+                <div class="service-info ">across Germany</div>
+            </div>
+            <!-- Go Bus -->
+            <div class="service-card">
+                <img src="./المواصلات/جو باص.jpg" alt="Go Bus">
+                <h2>Go Bus</h2>
+                <a href="https://go-bus.com/" class="service-link">click </a>
+                <div class="service-info">Cairo, Alexandria, Hurghada, Sharm El Sheikh, Luxor, and Aswan</div>
+            </div>
+
+
+            <h2 class="inline-section-title">Airplanes</h2>
+            <!-- تونس - Tunisair (الطيران) -->
+            <div class="service-card">
+                <img src="./المواصلات/6666.webp" alt="Tunisair">
+                <h2>Tunisair</h2>
+                <a href="https://www.tunisair.com/" class="service-link">click</a>
+                <div class="service-info"> Tunisia</div>
+            </div>
+            <!-- السعودية - Saudia (الطيران) -->
+            <div class="service-card">
+                <img src="./المواصلات/images (6).png" alt="Saudia">
+                <h2>Saudia</h2>
+                <a href="https://www.saudia.com/" class="service-link">click</a>
+                <div class="service-info"> Saudi Arabia</div>
+            </div>
+            <!-- تركيا - Turkish Airlines -->
+            <div class="service-card ">
+                <img src="./المواصلات/TurkishAirlines_logo.jpg " alt="Turkish Airlines ">
+                <h2>Turkish Airlines</h2>
+                <a href="https://www.turkishairlines.com/ " class="service-link "> click</a>
+                <div class="service-info "> Turkey</div>
+            </div>
+            <!-- ألمانيا - Lufthansa -->
+            <div class="service-card ">
+                <img src="./المواصلات/6.jpeg" alt="Lufthansa ">
+                <h2>Lufthansa</h2>
+                <a href="https://www.lufthansa.com/ " class="service-link ">click</a>
+                <div class="service-info "> Germany</div>
+            </div>
+            <!-- إيطاليا - Alitalia -->
+            <div class="service-card ">
+                <img src="./المواصلات/MIA_2020x780.jpg " alt="Alitalia ">
+                <h2>Alitalia</h2>
+                <a href="https://www.alitalia.com/ " class="service-link ">click</a>
+                <div class="service-info "> Italy</div>
+            </div>
+            <!-- مصر - EgyptAir -->
+            <div class="service-card ">
+                <img src="./المواصلات/A320-1024x712.jpeg " alt="EgyptAir ">
+                <h2>EgyptAir</h2>
+                <a href="https://www.egyptair.com/ " class="service-link ">click</a>
+                <div class="service-info "> Egypt</div>
+            </div>
+            <!-- نيجيريا - Air Peace -->
+            <div class="service-card ">
+                <img src="./المواصلات//5.jpg " alt="Air Peace ">
+                <h2>Air Peace</h2>
+                <a href="https://www.flyairpeace.com/ " class="service-link "> click</a>
+                <div class="service-info "> Nigeria</div>
+            </div>
+            <!-- الصين - China Eastern Airlines -->
+            <div class="service-card ">
+                <img src="./المواصلات/images (4).png " alt="China Eastern Airlines ">
+                <h2>China Eastern Airlines</h2>
+                <a href="https://www.ceair.com/ " class="service-link "> click</a>
+                <div class="service-info "> China</div>
+            </div>
+            <!-- كوريا - Korean Air -->
+            <div class="service-card ">
+                <img src="./المواصلات//17.png " alt="Korean Air ">
+                <h2>Korean Air</h2>
+                <a href="https://www.koreanair.com/ " class="service-link "> click</a>
+                <div class="service-info "> South Korea</div>
+            </div>
+            <!-- فرنسا - Air France -->
+            <div class="service-card ">
+                <img src="./المواصلات/air-france-logo.jpg" alt="Air France ">
+                <h2>Air France</h2>
+                <a href="https://www.airfrance.com/ " class="service-link "> click</a>
+                <div class="service-info ">France</div>
+            </div>
+            <!-- دبي - Emirates -->
+            <div class="service-card ">
+                <img src="./المواصلات/Emirates.jpeg" alt="Emirates ">
+                <h2>Emirates</h2>
+                <a href="https://www.emirates.com/ " class="service-link ">click</a>
+                <div class="service-info "> UAE</div>
+            </div>
+            <!-- روسيا - Aeroflot -->
+            <div class="service-card ">
+                <img src="./المواصلات/images (3).png" alt="Aeroflot ">
+                <h2>Aeroflot</h2>
+                <a href="https://www.aeroflot.ru/ " class="service-link ">click</a>
+                <div class="service-info "> Russia</div>
+            </div>
+            <!-- أمريكا - Delta Airlines -->
+            <div class="service-card ">
+                <img src="./المواصلات/2.png " alt="Delta Airlines ">
+                <h2>Delta Airlines</h2>
+                <a href="https://www.delta.com/ " class="service-link ">click </a>
+                <div class="service-info "> the USA</div>
+            </div>
+        </div>
+    </main>
+    <!-- تشغيل محرج البحث-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#search-input').on('keyup', function() {
+                const searchTerm = $(this).val().toLowerCase();
+                $('.service-card').each(function() {
+                    const text = $(this).text().toLowerCase();
+                    $(this).toggle(text.includes(searchTerm));
+                });
+            });
+        });
+    </script>
+    <!-- تأثيرات ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal@4.3.3/dist/scrollreveal.min.js "></script>
+    <script>
+        ScrollReveal().reveal('.service-card', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            interval: 100,
+            easing: 'ease-in-out',
+        });
+    </script>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz " crossorigin="anonymous "></script>
+    <!-- nav scroll -->
+    <script>
+        const navbar = document.getElementById('navbar');
+
+        window.onscroll = function() {
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled');
+                navbar.classList.remove('not-scroll');
+            } else {
+                navbar.classList.add('not-scroll');
+                navbar.classList.remove('scrolled');
+            };
+        }
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // تهيئة الإعدادات العامة
+        const scrollRevealOption = {
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000
+        };
+
+        // تطبيق التأثيرات على العناصر المختلفة
+        ScrollReveal().reveal('.navbar-brand', {
+            ...scrollRevealOption,
+            origin: 'left',
+            delay: 300
+        });
+
+        ScrollReveal().reveal('.nav-item', {
+            ...scrollRevealOption,
+            origin: 'top',
+            delay: 500,
+            interval: 300
+        });
+
+        ScrollReveal().reveal('.hero h1', {
+            ...scrollRevealOption,
+            delay: 700,
+            reset: true
+        });
+
+        ScrollReveal().reveal('.logo', {
+            ...scrollRevealOption,
+            origin: 'top',
+            delay: 1000
+        });
+
+        ScrollReveal().reveal('.search-container', {
+            ...scrollRevealOption,
+            origin: 'left',
+            delay: 1200
+        });
+
+        ScrollReveal().reveal('.service-card', {
+            ...scrollRevealOption,
+            interval: 500,
+            delay: 1500
+        });
+
+        // تأثيرات خاصة للعناصر المختلفة
+        ScrollReveal().reveal('.service-card img', {
+            ...scrollRevealOption,
+            origin: 'right',
+            delay: 200
+        });
+
+        ScrollReveal().reveal('.service-card h2', {
+            ...scrollRevealOption,
+            origin: 'top',
+            delay: 400
+        });
+
+        ScrollReveal().reveal('.service-link', {
+            ...scrollRevealOption,
+            origin: 'bottom',
+            delay: 600
+        });
+    </script>
+</body>
+
+</html>

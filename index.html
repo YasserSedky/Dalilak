@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalilak</title>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="top">
+    <!-- HEADER -->
+    <header class="header" data-header>
+        <div class="overlay" data-overlay></div>
+        <div class="header-top">
+            <div class="container">
+                <a href="tel:+01123456790" class="helpline-box">
+                    <div class="icon-box">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </div>
+                    <div class="wrapper">
+                        <p class="helpline-title">For Further Inquires :</p>
+                        <p class="helpline-number">+20 100 200 3000</p>
+                    </div>
+                </a>
+                <a href="#" class="logo">
+                    <img src="pic/logo.png" alt="logo">
+                </a>
+                <div class="header-btn-group">
+                    <div class="search-container search-btn" style="position: relative;">
+                        <input type="text" id="search-input" placeholder="Search for a country..."
+                            style="display: none; position: absolute; right: 50px; top: 0;">
+                        <button class="search-btn" aria-label="Search" id="search-btn">
+                            <ion-icon name="search"></ion-icon>
+                        </button>
+                    </div>
+                    <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <ul class="social-list">
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+                <nav class="navbar" data-navbar>
+                    <div class="navbar-top">
+                        <a href="#" class="logo">
+                            <img src="pic/logo.png" alt="logo">
+                        </a>
+                        <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+                    </div>
+                    <ul class="navbar-list">
+                        <li>
+                            <a href="#home" class="navbar-link" data-nav-link>home</a>
+                        </li>
+                        <li>
+                            <a href="#destination" class="navbar-link" data-nav-link>destination</a>
+                        </li>
+                        <li>
+                            <a href="#package" class="navbar-link" data-nav-link>packages</a>
+                        </li>
+                        <li>
+                            <a href="#gallery" class="navbar-link" data-nav-link>gallery</a>
+                        </li>
+                        <li>
+                            <a href="#rating" class="navbar-link" data-nav-link>review</a>
+                        </li>
+                        <li>
+                            <a href="Login & Register/login.html" class="navbar-link" data-nav-link>log in</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <!-- HERO -->
+            <section class="hero" id="home">
+                <div class="container">
+                    <h2 class="h1 hero-title">Dalilak</h2>
+                    <p class="hero-text">
+                        Plan your trip effortlessly with our website! We offer hotel and flight bookings, the best deals
+                        on tourist activities, 24/7 support, and exclusive prices. Discover amazing destinations and
+                        start your adventure now!
+                    </p>
+                </div>
+            </section>
+
+            <!-- DESTINATION -->
+            <section class="popular" id="destination" data-aos="zoom-in-up" data-aos-delay="400"
+                data-aos-duration="1200" data-aos-easing="ease-in-out">
+                <div class="container">
+                    <p class="section-subtitle">Discover your next destination</p>
+                    <h2 class="h2 section-title">Destination</h2>
+                    <p class="section-text">Discover amazing countries around the world.</p>
+
+                    <ul class="popular-list">
+
+                        <li class="popular-card show-card">
+                            <figure class="card-img"><img src="pic/egypt-pic.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/EGYPT/egypt.html">Egypt</a></h3>
+                                <p class="card-text">Egypt is a tourist destination with ancient monuments, beautiful
+                                    beaches, and Nile cruises.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card show-card">
+                            <figure class="card-img"><img src="pic/italy-pic.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/ITALY/italy.html">Italy</a></h3>
+                                <p class="card-text">Italy is famous for its historic landmarks, romantic cities,
+                                    beautiful beaches, and delicious food.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card show-card">
+                            <figure class="card-img"><img src="pic/amrica-pic.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/AMERICA/america.html">America</a></h3>
+                                <p class="card-text">America is known for its iconic landmarks, vibrant cities, diverse
+                                    landscapes, and cultural attractions.</p>
+                            </div>
+                        </li>
+
+                        <!-- Hidden cards initially -->
+                        <li class="popular-card hidden-card">
+                            <figure class="card-img"><img src="pic/tunisia.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/TUNISIA/tunisia.html">Tunisia</a></h3>
+                                <p class="card-text">Tunisia is known for its ancient ruins, beautiful beaches, vibrant
+                                    cities, and rich cultural heritage.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card hidden-card">
+                            <figure class="card-img"><img src="pic/philippines.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/PHILIPPINES/philippines.html">Philippines</a>
+                                </h3>
+                                <p class="card-text">The Philippines is known for its beautiful beaches, clear waters,
+                                    vibrant cities, and rich culture.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card hidden-card">
+                            <figure class="card-img"><img src="pic/spain.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/SPAIN/spain.html">Spain</a></h3>
+                                <p class="card-text">Spain is a tourist destination with historic landmarks, and vibrant
+                                    cities like Barcelona and Madrid.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card hidden-card">
+                            <figure class="card-img"><img src="pic/emirates-pic.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/EMIRATES/emirates.html">UAE</a></h3>
+                                <p class="card-text">The UAE is known for its modern architecture, luxury shopping, and
+                                    vibrant cities.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card hidden-card">
+                            <figure class="card-img"><img src="pic/ksa-pic.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/KSA/ksa.html">Saudi Arabia</a></h3>
+                                <p class="card-text">Saudi Arabia is known for its rich history and religious landmarks
+                                    like Mecca and Medina.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card hidden-card">
+                            <figure class="card-img"><img src="pic/turkiye.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/TURKIYE/turkiye.html">Turkey</a></h3>
+                                <p class="card-text">Turkey is known for its rich history, stunning landscapes, vibrant
+                                    cities, and beautiful coastlines.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card hidden-card">
+                            <figure class="card-img"><img src="pic/lebanon-pic.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/LEBANON/lebanon.html">LEBANON</a></h3>
+                                <p class="card-text">Lebanon is a small country by the Mediterranean, natural beauty, and welcoming culture.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card hidden-card">
+                            <figure class="card-img"><img src="pic/georgia-pic.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/GEORGIA/georgia.html">GEORGIA</a></h3>
+                                <p class="card-text">Georgia is a country between Europe and Asia, known for its rich history, scenic mountains, unique culture.</p>
+                            </div>
+                        </li>
+
+
+
+                        <li class="popular-card hidden-card">
+                            <figure class="card-img"><img src="pic/Greece-pic.jpg" alt="" loading="lazy"></figure>
+                            <div class="card-content">
+                                <div class="card-rating">
+                                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                                        name="star"></ion-icon>
+                                </div>
+                                <h3 class="h3 card-title"><a href="country/GREECE/greece.html">GREECE</a></h3>
+                                <p class="card-text">Greece is a southeastern European country known for its ancient history, beautiful islands, rich cultural.</p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <button id="toggle-btn" class="btn btn-primary">Show More</button>
+                </div>
+            </section>
+
+            <!-- PACKAGE -->
+            <section class="package" id="package" data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="1200"
+                data-aos-easing="ease-in-out">
+                <div class="container">
+                    <p class="section-subtitle">Popular Packages</p>
+                    <h2 class="h2 section-title">Checkout Our Packages</h2>
+                    <p class="section-text">
+                        Discover our exclusive travel packages tailored for every taste and budget. Enjoy top
+                        destinations, luxury stays, and unforgettable experiences. Book now for your dream trip!
+                    </p>
+
+                    <ul class="package-list">
+                        <li>
+                            <div class="package-card">
+                                <figure class="card-banner">
+                                    <img src="pic/euro-trip-package.jpg" alt="" loading="lazy">
+                                </figure>
+                                <div class="card-content">
+                                    <h3 class="h3 card-title">euro trip</h3>
+                                    <p class="card-text">Europe trip: France-Spain-Britain-Italy
+                                        <br />
+                                        Includes flights
+                                        <br />
+                                        includes accommodation in the most luxurious hotels<br />
+                                        includes two main meals<br />
+                                        including moving within cities
+                                    </p>
+                                    <ul class="card-meta-list">
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="time"></ion-icon>
+                                                <p class="text">21D/20N</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="people"></ion-icon>
+                                                <p class="text">Bookings: 63</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="location"></ion-icon>
+                                                <p class="text">Europe</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-price">
+                                    <div class="wrapper">
+                                        <p class="reviews">(58 reviews)</p>
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <p class="price">$5799 <span>/ per person</span></p>
+                                    <button class="btn btn-secondary">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="hidden">
+                            <div class="package-card">
+                                <figure class="card-banner">
+                                    <img src="pic/safari-package.jpg" alt="" loading="lazy">
+                                </figure>
+                                <div class="card-content">
+                                    <h3 class="h3 card-title">safari package</h3>
+                                    <p class="card-text">Safari in the Dubai Desert<br />
+                                        includes camping for 3 nights<br />
+                                        includes all meals<br />
+                                        includes commuting cars</p>
+                                    <ul class="card-meta-list">
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="time"></ion-icon>
+                                                <p class="text">4D/3N</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="people"></ion-icon>
+                                                <p class="text">Bookings: 24</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="location"></ion-icon>
+                                                <p class="text">UAE</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-price">
+                                    <div class="wrapper">
+                                        <p class="reviews">(17 reviews)</p>
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <p class="price">$349 <span>/ per person</span></p>
+                                    <button class="btn btn-secondary">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="hidden">
+                            <div class="package-card">
+                                <figure class="card-banner">
+                                    <img src="pic/blimp-package.jpg" alt="" loading="lazy">
+                                </figure>
+                                <div class="card-content">
+                                    <h3 class="h3 card-title">blimp package</h3>
+                                    <p class="card-text">Enjoy the balloon experience<br />
+                                        a full flight over the city of Luxor
+                                        <br />
+                                        see all the tourist places from a different perspective
+                                    </p>
+                                    <ul class="card-meta-list">
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="time"></ion-icon>
+                                                <p class="text">1D/0N</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="people"></ion-icon>
+                                                <p class="text">Bookings: 127</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="location"></ion-icon>
+                                                <p class="text">Egypt</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-price">
+                                    <div class="wrapper">
+                                        <p class="reviews">(108 reviews)</p>
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <p class="price">$119 <span>/ per person</span></p>
+                                    <button class="btn btn-secondary">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="hidden">
+                            <div class="package-card">
+                                <figure class="card-banner">
+                                    <img src="pic/hotel-package.jpg" alt="" loading="lazy">
+                                </figure>
+                                <div class="card-content">
+                                    <h3 class="h3 card-title">hotel package</h3>
+                                    <p class="card-text">Enjoy a luxurious hotel stay<br />
+                                        a fully featured hotel suite<br />
+                                        a distinctive view<br />
+                                        a private beach of the hotel<br />
+                                        massage, sauna and Spa</p>
+                                    <ul class="card-meta-list">
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="time"></ion-icon>
+                                                <p class="text">7D/6N</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="people"></ion-icon>
+                                                <p class="text">Bookings: 78</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="location"></ion-icon>
+                                                <p class="text">spain</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-price">
+                                    <div class="wrapper">
+                                        <p class="reviews">(46 reviews)</p>
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <p class="price">$1399 <span>/ per person</span></p>
+                                    <button class="btn btn-secondary">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="hidden">
+                            <div class="package-card">
+                                <figure class="card-banner">
+                                    <img src="pic/yacht-package.jpg" alt="" loading="lazy">
+                                </figure>
+                                <div class="card-content">
+                                    <h3 class="h3 card-title">yacht package</h3>
+                                    <p class="card-text">A cruise to discover the beauty of the seas<br />
+                                        all meals included<br />
+                                        featured rooms<br />
+                                        various activities</p>
+                                    <ul class="card-meta-list">
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="time"></ion-icon>
+                                                <p class="text">15D/14N</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="people"></ion-icon>
+                                                <p class="text">Bookings: 47</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <div class="meta-box">
+                                                <ion-icon name="location"></ion-icon>
+                                                <p class="text">europe</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-price">
+                                    <div class="wrapper">
+                                        <p class="reviews">(38 reviews)</p>
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <p class="price">$2399 <span>/ per person</span></p>
+                                    <button class="btn btn-secondary">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button id="toggleButton" class="btn btn-primary">View All Packages</button>
+                </div>
+            </section>
+
+            <!-- GALLERY -->
+            <section class="gallery" id="gallery" data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="1200"
+                data-aos-easing="ease-in-out">
+                <div class="container">
+                    <p class="section-subtitle">Photo Gallery</p>
+                    <h2 class="h2 section-title">Photos From Travellers</h2>
+                    <p class="section-text">
+                        Explore stunning moments captured by our travelers. Get inspired and create your own
+                        unforgettable memories.
+                    </p>
+                    <ul class="gallery-list">
+                        <li class="gallery-item">
+                            <figure class="gallery-image">
+                                <img src="pic/rome italy.jpg" alt="Santorini, Greece">
+                                <figcaption>Rome, Italy</figcaption>
+                            </figure>
+                        </li>
+                        <li class="gallery-item">
+                            <figure class="gallery-image">
+                                <img src="pic/Paris france.jpg" alt="Kyoto, Japan">
+                                <figcaption>Paris, France</figcaption>
+                            </figure>
+                        </li>
+                        <li class="gallery-item">
+                            <figure class="gallery-image">
+                                <img src="pic/Vessel New York.jpg" alt="Paris, France">
+                                <figcaption>New York, America</figcaption>
+                            </figure>
+                        </li>
+                        <li class="gallery-item">
+                            <figure class="gallery-image">
+                                <img src="pic/amsterdam Netherlands.jpg" alt="Bali, Indonesia">
+                                <figcaption>Amsterdam, Netherlands</figcaption>
+                            </figure>
+                        </li>
+                        <li class="gallery-item">
+                            <figure class="gallery-image">
+                                <img src="pic/london Britain.jpg" alt="New York, USA">
+                                <figcaption>London, Britain</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <!-- RATING -->
+            <section class="rating" id="rating" data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="1200"
+                data-aos-easing="ease-in-out">
+                <div class="container">
+                    <p class="section-subtitle">review</p>
+                    <h2 class="h2 section-title">Customer Evaluation</h2>
+                    <p class="section-text">
+                        Discover the stories of wanderlust and cherished memories through the eyes of our valued
+                        clients.
+                    </p>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="client__card">
+                                    <div class="client__content">
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                        <p>
+                                            Customer evaluation and review
+                                        </p>
+                                    </div>
+                                    <div class="client__details">
+                                        <img src="pic/user.jpg" alt="" />
+                                        <div>
+                                            <h4>user name</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="client__card">
+                                    <div class="client__content">
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                        <p>
+                                            Customer evaluation and review
+                                        </p>
+                                    </div>
+                                    <div class="client__details">
+                                        <img src="pic/user.jpg" alt="" />
+                                        <div>
+                                            <h4>user name</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="client__card">
+                                    <div class="client__content">
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                        <p>
+                                            Customer evaluation and review
+                                        </p>
+                                    </div>
+                                    <div class="client__details">
+                                        <img src="pic/user.jpg" alt="" />
+                                        <div>
+                                            <h4>user name</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="client__card">
+                                    <div class="client__content">
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                        <p>
+                                            Customer evaluation and review
+                                        </p>
+                                    </div>
+                                    <div class="client__details">
+                                        <img src="pic/user.jpg" alt="" />
+                                        <div>
+                                            <h4>user name</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="client__card">
+                                    <div class="client__content">
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                        <p>
+                                            Customer evaluation and review
+                                        </p>
+                                    </div>
+                                    <div class="client__details">
+                                        <img src="pic/user.jpg" alt="" />
+                                        <div>
+                                            <h4>user name</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="client__card">
+                                    <div class="client__content">
+                                        <div class="card-rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </div>
+                                        <p>
+                                            Customer evaluation and review
+                                        </p>
+                                    </div>
+                                    <div class="client__details">
+                                        <img src="pic/user.jpg" alt="" />
+                                        <div>
+                                            <h4>user name</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-copyright">
+            <p class="copyright">
+                &copy; 2025 Dalilak
+            </p>
+        </div>
+    </footer>
+
+    <!-- GO TO TOP -->
+    <a href="#top" class="go-top" data-go-top>
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </a>
+
+
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- AOS (Animate On Scroll) js -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+
+    <!-- script js -->
+    <script src="js/script.js"></script>
+
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

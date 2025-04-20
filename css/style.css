@@ -1,0 +1,1487 @@
+:root {
+    /* تعريف متغيرات الألوان */
+    --united-nations-blue: hsl(214, 56%, 58%);
+    --bright-navy-blue: hsl(214, 57%, 51%);
+    --spanish-gray: hsl(0, 0%, 60%);
+    --black-coral: hsl(225, 8%, 42%);
+    --oxford-blue: hsl(208, 97%, 12%);
+    --yale-blue: hsl(214, 72%, 33%);
+    --blue-ncs: hsl(197, 100%, 36%);
+    --gunmetal: hsl(206, 34%, 20%);
+    --gainsboro: hsl(0, 0%, 88%);
+    --cultured: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --onyx: hsl(0, 0%, 25%);
+    --jet: hsl(0, 0%, 20%);
+
+    /* تعريف الخطوط */
+    --ff-poppins: "Poppins", sans-serif;
+    --ff-montserrat: "Montserrat", sans-serif;
+
+    /* تعريف أحجام الخطوط بمرونة */
+    --fs-1: calc(20px + 3.5vw);
+    --fs-2: calc(18px + 1.6vw);
+    --fs-3: calc(16px + 0.45vw);
+    --fs-4: 15px;
+    --fs-5: 14px;
+    --fs-6: 13px;
+    --fs-7: 12px;
+    --fs-8: 11px;
+
+    /* تعريف سماكات الخطوط */
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    /* تعريف الانتقالات */
+    --transition: 0.25s ease-in-out;
+
+    /* تعريف المسافات العامة */
+    --section-padding: 60px;
+
+    /* تعريف أنصاف الأقطار */
+    --radius-15: 15px;
+    --radius-25: 25px;
+}
+
+/* إزالة الهوامش والمسافات الافتراضية وضبط حساب الأبعاد */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* إزالة النقط من القوائم */
+li {
+    list-style: none;
+}
+
+/* إزالة التسطير الافتراضي من الروابط */
+a {
+    text-decoration: none;
+}
+
+/* ضبط العناصر القابلة للعرض كعناصر بلوك */
+a,
+img,
+span,
+input,
+label,
+button,
+ion-icon {
+    display: block;
+}
+
+/* إزالة الإطارات والخلفيات الافتراضية من الإدخالات والأزرار */
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    /* يجعل الخط متناسقًا مع النص */
+}
+
+/* تغيير مؤشر الفأرة عند التمرير فوق الأزرار */
+button {
+    cursor: pointer;
+}
+
+/* جعل الإدخالات تمتد بعرض كامل داخل الحاويات */
+input {
+    width: 100%;
+}
+
+/* منع الأيقونات من التفاعل مع الماوس */
+ion-icon {
+    pointer-events: none;
+}
+
+/* ضبط الخط الأساسي للموقع */
+html {
+    font-family: var(--ff-poppins);
+    scroll-behavior: smooth;
+    /* يجعل التمرير سلسًا */
+}
+
+/* ضبط لون خلفية الموقع */
+body {
+    background: var(--white);
+}
+
+/* إعادة استخدام الأنماط */
+
+/* حاوية تحتوي على تباعد داخلي أفقي */
+.container {
+    padding-inline: 15px;
+}
+
+/* أنماط الأزرار العامة */
+.btn {
+    color: var(--white);
+    text-transform: uppercase;
+    /* تحويل النصوص إلى أحرف كبيرة */
+    font-size: var(--fs-5);
+    border-radius: 100px;
+    /* يجعل الزر دائري الحواف */
+    padding: var(--padding, 8px 18px);
+    /* تباعد داخلي مع قيمة افتراضية */
+    border: var(--border-width, 2px) solid transparent;
+    /* حد افتراضي شفاف */
+    transition: var(--transition);
+    /* تأثير انتقال عند التغيير */
+}
+
+/* زر أساسي */
+.btn-primary {
+    background: var(--bright-navy-blue);
+    border-color: var(--bright-navy-blue);
+}
+
+/* تغيير لون زر الأساسي عند التفاعل */
+.btn-primary:is(:hover, :focus) {
+    background: var(--yale-blue);
+    border-color: var(--yale-blue);
+}
+
+/* زر ثانوي */
+.btn-secondary {
+    border-color: var(--white);
+}
+
+/* تأثير عند التحويم أو التركيز على الزر الثانوي */
+.btn-secondary:is(:hover, :focus) {
+    background: hsla(0, 0%, 100%, 0.1);
+}
+
+/* أنماط العناوين */
+.h1,
+.h2,
+.h3 {
+    font-weight: var(--fw-800);
+    font-family: var(--ff-montserrat);
+    text-transform: uppercase;
+}
+
+/* أنماط العنوان الرئيسي */
+.h1 {
+    color: var(--white);
+    font-size: var(--fs-1);
+}
+
+/* أنماط العناوين الفرعية */
+.h2,
+.h3 {
+    color: var(--gunmetal);
+}
+
+/* حجم العنوان الثاني */
+.h2 {
+    font-size: var(--fs-2);
+}
+
+/* حجم العنوان الثالث مع سماكة مختلفة */
+.h3 {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-700);
+}
+
+/* أنماط النصوص المساعدة */
+.section-subtitle {
+    color: var(--bright-navy-blue);
+    font-size: var(--fs-5);
+    text-transform: uppercase;
+    font-family: var(--ff-montserrat);
+    margin-bottom: 8px;
+}
+
+/* تباعد للعنوان الرئيسي داخل الأقسام */
+.section-title {
+    margin-bottom: 15px;
+}
+
+/* أنماط النصوص داخل الأقسام */
+.section-text {
+    color: var(--black-coral);
+    margin-bottom: 30px;
+}
+
+/* أنماط النصوص داخل الكروت */
+.card-text {
+    color: var(--black-coral);
+    font-size: var(--fs-5);
+}
+
+
+
+/* HEADER */
+.header {
+    position: absolute;
+    /* يجعل العنصر مطلق الموضع بالنسبة لأقرب عنصر نسبي */
+    top: 0;
+    /* يضع العنصر في أعلى الصفحة */
+    left: 0;
+    /* يضع العنصر في أقصى اليسار */
+    width: 100%;
+    /* يجعل عرض العنصر يغطي العرض بالكامل */
+    padding-top: 61px;
+    /* يضيف مسافة داخلية من الأعلى */
+    z-index: 4;
+    /* يحدد أولوية العرض بالنسبة للعناصر الأخرى */
+}
+
+.header-top {
+    position: absolute;
+    /* يجعل العنصر عائمًا فوق العناصر الأخرى */
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: var(--transition);
+    /* يضيف تأثير انتقال سلس عند التغيير */
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+    /* يضيف خطًا سفليًا شبه شفاف */
+    padding-block: 15px;
+    /* يضيف تباعدًا عموديًا */
+    z-index: 1;
+}
+
+.header.active .header-top {
+    position: fixed;
+    /* يبقي العنصر ثابتًا عند التمرير */
+    background: var(--gunmetal);
+    /* يغير لون الخلفية */
+}
+
+.header-top .container {
+    display: grid;
+    /* يستخدم التخطيط الشبكي */
+    grid-template-columns: repeat(3, 1fr);
+    /* يوزع المحتوى على 3 أعمدة متساوية */
+    justify-items: flex-start;
+    /* يحدد محاذاة العناصر في بداية كل عمود */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+}
+
+.helpline-box .wrapper {
+    display: none;
+    /* يخفي العنصر */
+}
+
+.helpline-box .icon-box {
+    background: var(--bright-navy-blue);
+    /* يحدد لون الخلفية */
+    padding: 6px;
+    /* يضيف مسافة داخلية */
+    border-radius: 50%;
+    /* يجعل الشكل دائريًا */
+    color: var(--white);
+    /* يحدد لون النص */
+}
+
+.helpline-box .icon-box ion-icon {
+    --ionicon-stroke-width: 40px;
+    /* يحدد سماكة الأيقونة */
+}
+
+.header-top .logo {
+    margin-inline: auto;
+    /* يجعل الشعار في المنتصف أفقيًا */
+}
+
+.header-top .logo img {
+    max-width: 100px;
+    /* يحدد الحد الأقصى لعرض الصورة */
+}
+
+.header-btn-group {
+    justify-self: flex-end;
+    /* يجعل العناصر في نهاية الصف */
+    display: flex;
+    /* يستخدم التخطيط المرن */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+    gap: 10px;
+    /* يضيف مسافة بين العناصر */
+    color: var(--white);
+    /* يحدد لون النص */
+}
+
+.search-btn,
+.nav-open-btn {
+    font-size: 30px;
+    /* يحدد حجم الخط */
+    color: inherit;
+    /* يأخذ لون النص من العنصر الأب */
+}
+
+.search-btn {
+    font-size: 20px;
+    /* حجم خط خاص بزر البحث */
+}
+
+.header-bottom {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+    /* يضيف خطًا سفليًا شفافًا */
+}
+
+.header-bottom .container {
+    display: flex;
+    /* يستخدم التخطيط المرن */
+    justify-content: space-between;
+    /* يوزع العناصر بالتساوي */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+    padding-block: 15px;
+    /* يضيف تباعدًا عموديًا */
+}
+
+.social-list {
+    display: flex;
+    /* يستخدم التخطيط المرن */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+    gap: 5px;
+    /* يحدد مسافة بين الأيقونات */
+}
+
+.social-link {
+    color: var(--white);
+    /* يحدد لون الأيقونات */
+    padding: 8px;
+    /* يضيف مسافة داخلية */
+    border: 1px solid hsla(0, 0%, 100%, 0.3);
+    /* يضيف حدود شبه شفافة */
+    border-radius: 50%;
+    /* يجعل الأيقونات دائرية */
+    font-size: 15px;
+    /* يحدد حجم الأيقونة */
+    transition: var(--transition);
+    /* يضيف تأثير انتقال */
+}
+
+.social-link:is(:hover, :focus) {
+    background: hsla(0, 0%, 100%, 0.2);
+    /* يغير لون الخلفية عند التحويم أو التركيز */
+}
+
+.header .btn {
+    --padding: 4px 20px;
+    /* يحدد التباعد الداخلي للزر */
+}
+
+.header .navbar {
+    position: fixed;
+    /* يجعل القائمة ثابتة */
+    top: 0;
+    right: -300px;
+    /* يخفي القائمة خارج الشاشة */
+    width: 100%;
+    max-width: 300px;
+    /* يحدد الحد الأقصى للعرض */
+    height: 100%;
+    background: var(--white);
+    /* يحدد لون الخلفية */
+    visibility: hidden;
+    /* يخفي القائمة */
+    pointer-events: none;
+    /* يمنع التفاعل مع العنصر */
+    transition: 0.15s ease-in;
+    /* يضيف تأثير انتقال عند الفتح */
+    z-index: 3;
+}
+
+.navbar.active {
+    right: 0;
+    /* يُظهر القائمة */
+    visibility: visible;
+    /* يجعلها مرئية */
+    pointer-events: all;
+    /* يسمح بالتفاعل مع العنصر */
+    transition: 0.25s ease-out;
+    /* يضيف تأثير خروج سلس */
+}
+
+.navbar-top {
+    display: flex;
+    /* يستخدم التخطيط المرن */
+    justify-content: space-between;
+    /* يوزع العناصر بالتساوي */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+    padding: 40px 15px;
+    /* يحدد التباعد الداخلي */
+}
+
+.navbar-top .logo img {
+    width: 150px;
+    /* يحدد عرض الشعار */
+}
+
+.nav-close-btn {
+    font-size: 20px;
+    /* يحدد حجم زر الإغلاق */
+    color: var(--bright-navy-blue);
+    /* يحدد لون الزر */
+}
+
+.nav-close-btn ion-icon {
+    --ionicon-stroke-width: 80px;
+    /* يحدد سماكة الأيقونة */
+}
+
+.navbar-list {
+    border-top: 1px solid hsla(0, 0%, 0%, 0.1);
+    /* يضيف خطًا علويًا */
+}
+
+.navbar-list li {
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+    /* يضيف خطًا سفليًا بين العناصر */
+}
+
+.navbar-link {
+    padding: 15px 20px;
+    /* يحدد المسافة الداخلية */
+    color: var(--jet);
+    /* يحدد لون النص */
+    font-weight: var(--fw-500);
+    /* يحدد سماكة الخط */
+    font-size: var(--fs-4);
+    /* يحدد حجم الخط */
+    transition: var(--transition);
+    /* يضيف تأثير انتقال */
+    text-transform: capitalize;
+    /* يجعل أول حرف كبيرًا */
+}
+
+.navbar-link:is(:hover, :focus) {
+    color: var(--bright-navy-blue);
+    /* يغير لون الرابط عند التحويم أو التركيز */
+}
+
+.overlay {
+    position: fixed;
+    /* يجعل الخلفية ثابتة */
+    inset: 0;
+    /* يملأ الشاشة بالكامل */
+    background: var(--black);
+    /* يحدد لون الخلفية */
+    opacity: 0;
+    /* يجعل العنصر غير مرئي */
+    pointer-events: none;
+    /* يمنع التفاعل معه */
+    z-index: 2;
+    /* يحدد طبقة الظهور */
+    transition: var(--transition);
+    /* يضيف تأثير انتقال */
+}
+
+.overlay.active {
+    opacity: 0.7;
+    /* يجعل الخلفية شفافة جزئيًا عند التفعيل */
+    pointer-events: all;
+    /* يسمح بالتفاعل عند تفعيل العنصر */
+}
+
+
+
+
+/* HERO */
+.hero {
+    background-image: url("../pic/image1.png");
+    /* تعيين الصورة الأولى كخلفية */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: hsla(0, 0%, 0%, 0.395);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+
+    display: grid;
+    place-items: center;
+    min-height: 600px;
+    text-align: center;
+    padding-top: 125px;
+
+    animation: changeBackground 25s infinite;
+    /* تشغيل الأنيميشن بشكل متكرر كل 25 ثانية */
+}
+
+/* انيميشن تغيير الصور */
+@keyframes changeBackground {
+    0% {
+        background-image: url("../pic/spain.jpg");
+    }
+    20% {
+        background-image: url("../pic/turkiye.jpg");
+    }
+    40% {
+        background-image: url("../pic/italy-pic.jpg");
+    }
+    60% {
+        background-image: url("../pic/emirates-pic.jpg");
+    }
+    80% {
+        background-image: url("../pic/ksa-pic.jpg");
+    }
+    100% {
+        background-image: url("../pic/amrica-pic.jpg");
+    }
+}
+
+/* تنسيق عنوان القسم الرئيسي */
+.hero-title {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* تنسيق نص القسم الرئيسي */
+.hero-text {
+    color: var(--white);
+    font-size: var(--fs-5);
+    margin-bottom: 40px;
+}
+
+
+
+
+
+/* POPULAR */
+/* قسم الوجهات الشائعة */
+.popular {
+    padding-block: var(--section-padding);
+}
+
+/* إعداد المسافات بين عناصر القائمة */
+.popular-list,
+.popular-list>li:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/* إخفاء بعض البطاقات حتى يتم عرضها عند الحاجة */
+.hidden-card {
+    display: none;
+}
+
+/* تأثير الظهور التدريجي والانزلاق الملحوظ */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(150px);
+        /* حركة أوضح */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تصميم البطاقة */
+.popular-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-25);
+    height: 430px;
+
+    /* حركة وظهور ملحوظ */
+    animation: fadeInUp 7s cubic-bezier(0.23, 1, 0.32, 1) both;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.945);
+    transition: transform 0.9s ease, box-shadow 0.9s ease;
+}
+
+/* تأثير عند المرور بالماوس */
+.popular-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* إعداد صورة البطاقة */
+.popular-card .card-img {
+    height: 100%;
+}
+
+.popular-card .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* صندوق المحتوى داخل البطاقة */
+.popular-card .card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: var(--white);
+    border-radius: var(--radius-25);
+    padding: 20px;
+}
+
+/* تصميم التقييم داخل البطاقة */
+.popular-card .card-rating {
+    background: var(--bright-navy-blue);
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    transform: translateY(-50%);
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* تنسيق العنوان الفرعي للبطاقة */
+.popular-card .card-subtitle {
+    color: var(--blue-ncs);
+    font-size: var(--fs-6);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* تنسيق عنوان البطاقة */
+.popular-card .card-title {
+    margin-bottom: 5px;
+}
+
+/* تنسيق الروابط داخل البطاقة */
+.popular-card :is(.card-subtitle, .card-title)>a {
+    color: inherit;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+/* زر عرض المزيد */
+.popular .btn {
+    margin-inline: auto;
+}
+
+
+
+
+
+/* PACKAGE */
+/* تحديد تنسيق القسم */
+.package {
+    padding-block: var(--section-padding);
+    /* إضافة تباعد علوي وسفلي للقسم */
+}
+
+/* إخفاء العناصر التي تحتوي على فئة "hidden" */
+.hidden {
+    display: none;
+    /* إخفاء العناصر افتراضيًا */
+}
+
+/* إظهار العناصر عند إضافة فئة "show" */
+.show {
+    display: block;
+}
+
+/* تحديد تباعد أسفل قائمة الباقات */
+.package-list {
+    margin-bottom: 40px;
+}
+
+/* إضافة مسافة بين عناصر قائمة الباقات */
+.package-list>li:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/* تصميم البطاقة الخاصة بالباقات */
+.package-card {
+    background: var(--cultured);
+    /* تعيين خلفية بلون فاتح */
+    overflow: hidden;
+    /* منع تجاوز المحتوى حدود البطاقة */
+    border-radius: 15px;
+    /* إضافة زوايا مستديرة */
+    /* حركة وظهور ملحوظ */
+    animation: fadeInUp 7s cubic-bezier(0.23, 1, 0.32, 1) both;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.750);
+    transition: transform 0.9s ease, box-shadow 0.9s ease;
+}
+
+/* تأثير عند الوقوف على الكارت بالماوس */
+.package-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* تحديد ارتفاع القسم الذي يحتوي على صورة الباقة */
+.package-card .card-banner {
+    height: 250px;
+}
+
+/* ضبط عرض وارتفاع الصورة داخل الباقة */
+.package-card .card-banner img {
+    width: 100%;
+    /* جعل الصورة تمتد بعرض الحاوية */
+    height: 100%;
+    /* جعل الصورة تمتد بارتفاع الحاوية */
+    object-fit: cover;
+    /* ضمان ملاءمة الصورة دون تشويه */
+}
+
+/* تحديد تنسيق المحتوى داخل البطاقة */
+.package-card .card-content {
+    padding: 30px 20px;
+    /* إضافة هوامش داخلية */
+}
+
+/* تحديد تنسيق عنوان الباقة */
+.package-card .card-title {
+    margin-bottom: 15px;
+    /* إضافة تباعد أسفل العنوان */
+    transition: color 0.3s ease;
+    /* تأثير التغيير السلس للون */
+}
+
+/* تنسيق النصوص داخل البطاقة */
+.package-card .card-text {
+    line-height: 1.6;
+    /* تحسين التباعد بين الأسطر */
+    margin-bottom: 20px;
+    /* إضافة تباعد أسفل النص */
+}
+
+/* تصميم القائمة الخاصة ببيانات الباقة */
+.card-meta-list {
+    background: var(--white);
+    /* تعيين لون الخلفية */
+    max-width: max-content;
+    /* جعل العرض يطابق المحتوى */
+    display: flex;
+    /* استخدام Flexbox لمحاذاة العناصر */
+    flex-wrap: wrap;
+    /* السماح بانتقال العناصر إلى سطر جديد عند الحاجة */
+    justify-content: center;
+    /* توسيط العناصر أفقياً */
+    align-items: center;
+    /* توسيط العناصر عموديًا */
+    padding: 8px;
+    /* إضافة هوامش داخلية */
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.15);
+    /* إضافة ظل خفيف */
+    border-radius: 50px;
+    /* جعل الزوايا دائرية */
+}
+
+/* تنسيق عناصر القائمة */
+.card-meta-item {
+    position: relative;
+}
+
+/* إضافة فاصل بين العناصر داخل القائمة */
+.card-meta-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -1px;
+    bottom: 4px;
+    width: 1px;
+    background: hsla(0, 0%, 0%, 0.3);
+}
+
+/* تنسيق المحتوى داخل عناصر القائمة */
+.meta-box {
+    display: flex;
+    /* استخدام Flexbox */
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* إضافة مسافة بين الأيقونات والنص */
+    padding-inline: 9px;
+    color: var(--black-coral);
+    font-size: var(--fs-8);
+}
+
+/* تخصيص لون الأيقونات داخل القائمة */
+.meta-box>ion-icon {
+    color: var(--bright-navy-blue);
+    font-size: 13px;
+}
+
+/* تصميم مربع السعر */
+.package-card .card-price {
+    background: var(--united-nations-blue);
+    /* تعيين خلفية بلون أزرق */
+    color: var(--white);
+    /* تعيين لون النص باللون الأبيض */
+    padding: 25px 20px;
+    /* إضافة تباعد داخلي */
+    text-align: center;
+    /* توسيط المحتوى */
+}
+
+/* ضبط تنسيق السعر والتقييم */
+.package-card .card-price .wrapper {
+    display: flex;
+    /* استخدام Flexbox */
+    flex-wrap: wrap;
+    /* السماح بانتقال العناصر لسطر جديد عند الحاجة */
+    justify-content: center;
+    align-items: center;
+    gap: 5px 15px;
+    /* ضبط المسافات بين العناصر */
+    margin-bottom: 10px;
+}
+
+/* تخصيص حجم الخط لتقييمات المستخدمين */
+.package-card .card-price .reviews {
+    font-size: var(--fs-5);
+}
+
+/* تصميم أيقونات التقييم */
+.package-card .card-rating {
+    display: flex;
+    /* استخدام Flexbox */
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    /* تقليل المسافة بين الأيقونات */
+    font-size: 14px;
+}
+
+/* تغيير لون آخر أيقونة في التقييم */
+.package-card .card-rating ion-icon:last-child {
+    color: hsl(0, 0%, 80%);
+}
+
+/* تخصيص تنسيق السعر */
+.package-card .price {
+    font-size: var(--fs-2);
+    font-family: var(--ff-montserrat);
+    font-weight: var(--fw-800);
+    margin-bottom: 20px;
+}
+
+/* تخصيص تنسيق النص الصغير داخل السعر */
+.package-card .price span {
+    font-size: var(--fs-7);
+    font-weight: initial;
+}
+
+/* توسيط زر الإجراءات داخل القسم */
+.package .btn {
+    margin-inline: auto;
+}
+
+
+
+
+
+/* GALLERY */
+/* تحديد تنسيق قسم المعرض */
+.gallery {
+    padding-block: var(--section-padding);
+}
+
+/* إعداد قائمة المعرض باستخدام Grid ديناميكي */
+.gallery-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* تنسيق العنصر الحاوي للصورة */
+.gallery-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-15);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.750);
+    transition: box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.750);
+}
+
+/* تنسيق الصور داخل المعرض مع تأثير zoom */
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-image:hover img {
+    transform: scale(1.05);
+}
+
+/* تخصيص ترتيب الصورة الثالثة لتمتد على صفين */
+.gallery-item:nth-child(3) {
+    grid-area: span 2 / span 1;
+}
+
+/* تنسيق نص figcaption */
+.gallery-image figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 15px;
+    width: 100%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* تحسين الاستجابة على الشاشات الصغيرة */
+@media (max-width: 600px) {
+    .gallery-list {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item:nth-child(3) {
+        grid-area: auto;
+        /* إلغاء التمدد على الشاشات الصغيرة */
+    }
+}
+
+
+
+
+
+/* RATING */
+.rating {
+    padding-block: var(--section-padding);
+    /* إضافة تباعد علوي وسفلي للقسم */
+}
+
+/* إعدادات السلايدر */
+.swiper {
+    width: 100%;
+    /* جعل السلايدر يمتد بكامل العرض */
+    padding: 20px;
+    /* إضافة تباعد داخلي */
+}
+
+.swiper-slide {
+    min-width: 375px;
+    /* تحديد الحد الأدنى لعرض كل شريحة */
+}
+
+/* تصميم بطاقة العميل */
+.client__card {
+    padding: 5px;
+    /* إضافة هامش داخلي */
+    background-color: var(--cultured);
+    /* لون الخلفية الأساسي */
+    border-radius: 1rem;
+    /* تدوير الحواف */
+    transition: 0.3s;
+    /* تفعيل تأثير الانتقال */
+}
+
+/* تغيير لون الخلفية عند تحريك المؤشر فوق البطاقة */
+.client__card:hover {
+    background-color: var(--united-nations-blue);
+}
+
+/* محتوى بطاقة العميل */
+.client__content {
+    padding: 1rem;
+    /* إضافة تباعد داخلي */
+    background-color: var(--white);
+    /* لون الخلفية */
+    border-radius: calc(1rem - 5px);
+    /* تدوير الحواف مع تقليل التدوير قليلاً */
+}
+
+/* تصميم تصنيف التقييم بالنجوم */
+.card-rating {
+    display: flex;
+    /* محاذاة النجوم بشكل أفقي */
+    justify-content: center;
+    /* توسيط النجوم أفقيًا */
+    align-items: center;
+    /* توسيط النجوم عموديًا */
+    gap: 3px;
+    /* مسافة بين النجوم */
+    font-size: 28px;
+    /* حجم الأيقونات */
+    padding: 10px;
+    /* تباعد داخلي */
+}
+
+/* تغيير لون آخر نجمة لجعلها مميزة */
+.card-rating ion-icon:last-child {
+    color: gold;
+    /* اللون الذهبي */
+}
+
+/* تنسيق نص التقييم */
+.client__content p {
+    color: var(--text-dark);
+    /* لون النص */
+}
+
+/* معلومات العميل */
+.client__details {
+    padding: 1rem;
+    /* تباعد داخلي */
+    display: flex;
+    /* عرض المعلومات أفقيًا */
+    align-items: center;
+    /* محاذاة العناصر عموديًا */
+    gap: 1rem;
+    /* مسافة بين الصورة والنص */
+}
+
+/* صورة العميل */
+.client__details img {
+    max-width: 50px;
+    /* تحديد أقصى عرض للصورة */
+    border-radius: 100%;
+    /* جعل الصورة دائرية */
+}
+
+/* اسم العميل */
+.client__details h4 {
+    font-size: 1.1rem;
+    /* حجم النص */
+    font-weight: 600;
+    /* جعل الخط سميكًا */
+    color: var(--text-dark);
+    /* لون النص */
+    transition: 0.3s;
+    /* تأثير الانتقال */
+}
+
+/* تغيير لون اسم العميل عند تمرير المؤشر على البطاقة */
+.client__card:hover h4 {
+    color: var(--white);
+}
+
+
+
+
+/* FOOTER */
+.footer-copyright {
+    --gunmetal: hsl(205, 36%, 17%);
+    /* تعريف متغير للون الخلفية */
+    background: var(--gunmetal);
+    /* تطبيق لون الخلفية */
+    display: flex;
+    /* استخدام Flexbox لتنسيق العناصر داخله */
+    justify-content: center;
+    /* محاذاة المحتوى أفقيًا في المنتصف */
+    align-items: center;
+    /* محاذاة المحتوى عموديًا في المنتصف */
+    height: 40px;
+    /* تحديد ارتفاع الفوتر */
+    width: 100%;
+    /* جعل الفوتر يمتد بكامل عرض الصفحة */
+    position: relative;
+    /* يساعد في ضبط المحاذاة داخل الحاوية */
+}
+
+.copyright {
+    color: var(--gainsboro);
+    /* تحديد لون النص */
+    font-size: var(--fs-5);
+    /* استخدام متغير لحجم الخط */
+    margin: 0;
+    /* إزالة الهوامش الافتراضية لضمان محاذاة النص بشكل صحيح */
+}
+
+
+
+/* UP TO GO */
+.go-top {
+    position: fixed;
+    /* تثبيت العنصر في مكانه عند التمرير */
+    bottom: 15px;
+    /* تحديد المسافة من الأسفل */
+    right: 15px;
+    /* تحديد المسافة من اليمين */
+    width: 35px;
+    /* تحديد عرض الزر */
+    height: 35px;
+    /* تحديد ارتفاع الزر */
+    background: var(--bright-navy-blue);
+    /* تعيين لون الخلفية */
+    color: var(--white);
+    /* تعيين لون النص */
+    display: grid;
+    /* استخدام تخطيط الشبكة لتوسيط الأيقونة داخل الزر */
+    place-items: center;
+    /* توسيط المحتوى أفقياً وعمودياً */
+    font-size: 18px;
+    /* تحديد حجم الأيقونة داخل الزر */
+    border-radius: 6px;
+    /* تدوير زوايا الزر */
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
+    /* إضافة ظل للزر */
+    opacity: 0;
+    /* إخفاء الزر بشكل افتراضي */
+    transform: translateY(10px);
+    /* تحريك الزر لأسفل قليلاً لإضافة تأثير عند الظهور */
+    visibility: hidden;
+    /* إخفاء العنصر حتى يتم التمرير */
+    transition: var(--transition);
+    /* تفعيل تأثير الانتقال */
+}
+
+/* عند تفعيل الزر عند التمرير */
+.go-top.active {
+    opacity: 0.8;
+    /* جعله شبه شفاف */
+    transform: translateY(0);
+    /* إعادته إلى موقعه الطبيعي */
+    visibility: visible;
+    /* إظهاره */
+}
+
+/* عند تمرير الماوس فوق الزر أو عند التركيز عليه */
+.go-top:is(:hover, :focus) {
+    opacity: 1;
+    /* جعله مرئيًا بالكامل */
+}
+
+
+
+
+
+
+/* MEDIA QUERIES - تعديلات التصميم حسب حجم الشاشة */
+/* شاشات بعرض 580 بكسل فأكثر */
+@media (min-width: 580px) {
+    .container {
+        max-width: 580px;
+        /* تحديد الحد الأقصى للعرض */
+        margin-inline: auto;
+        /* توسيط العنصر */
+    }
+
+    .btn {
+        --fs-5: 16px;
+        /* ضبط حجم الخط */
+        --padding: 12px 30px;
+        /* ضبط الحواف الداخلية */
+    }
+
+    section:not(.cta) :is(.section-subtitle, .section-title, .section-text) {
+        text-align: center;
+        /* توسيط النصوص */
+    }
+
+    .section-text {
+        margin-bottom: 40px;
+        /* إضافة مسافة أسفل النص */
+    }
+
+    .card-text {
+        --fs-5: 15px;
+        /* حجم النص داخل البطاقات */
+    }
+
+    .header {
+        padding-top: 83px;
+        /* تعديل المسافة العلوية للهيدر */
+    }
+
+    .helpline-box .icon-box {
+        padding: 14px;
+        /* ضبط الحواف الداخلية لأيقونات الدعم */
+    }
+
+    .header-top .logo img {
+        max-width: unset;
+        /* إزالة الحد الأقصى لحجم الشعار */
+    }
+
+    .search-btn {
+        font-size: 30px;
+        /* تكبير زر البحث */
+    }
+
+    .nav-open-btn {
+        font-size: 40px;
+        /* تكبير زر فتح القائمة */
+    }
+
+    .header .btn {
+        --fs-5: 14px;
+        /* تصغير حجم الخط داخل الأزرار */
+        --padding: 6px 20px;
+        /* ضبط المسافات الداخلية للأزرار */
+    }
+
+    .hero {
+        min-height: 800px;
+        /* تحديد الحد الأدنى لارتفاع قسم البطل */
+        padding-top: 85px;
+        /* تعديل المسافة العلوية */
+    }
+
+    .hero-text {
+        --fs-5: 15px;
+        /* حجم النص داخل قسم البطل */
+    }
+
+    .popular-card .card-content {
+        right: auto;
+        /* إزالة التحديد الأيمن لمحتوى البطاقة */
+    }
+}
+
+/* شاشات بعرض 768 بكسل فأكثر */
+@media (min-width: 768px) {
+    :root {
+        --fs-5: 15px;
+        /* ضبط حجم النص الأساسي */
+    }
+
+    .container {
+        max-width: 800px;
+        /* زيادة عرض الحاوية */
+    }
+
+    .section-text {
+        max-width: 60ch;
+        /* تحديد الحد الأقصى لطول النص */
+        margin-inline: auto;
+        /* توسيط النص */
+    }
+
+    .helpline-box {
+        display: flex;
+        /* جعل المحتوى في صف واحد */
+        justify-content: flex-start;
+        /* محاذاة العناصر لليسار */
+        align-items: center;
+        /* توسيط العناصر عموديًا */
+        gap: 10px;
+        /* تحديد المسافة بين العناصر */
+    }
+
+    .helpline-box .wrapper {
+        display: block;
+        /* جعل العنصر عنصر بلوك */
+        color: var(--white);
+        /* تحديد لون النص */
+        font-size: var(--fs-6);
+        /* ضبط حجم الخط */
+    }
+
+    .social-list {
+        gap: 10px;
+        /* تحديد المسافة بين عناصر القائمة الاجتماعية */
+    }
+
+    .popular-list {
+        display: grid;
+        /* تغيير التخطيط إلى شبكة */
+        grid-template-columns: 1fr 1fr;
+        /* عرض عنصرين في كل صف */
+        gap: 30px;
+        /* تحديد المسافة بين العناصر */
+        margin-bottom: 50px;
+        /* إضافة مسافة سفلية */
+    }
+
+    .popular-list>li:not(:last-child) {
+        margin-bottom: 0;
+        /* إزالة الهامش السفلي للعناصر غير الأخيرة */
+    }
+
+    .popular-card .card-content {
+        right: 20px;
+        /* ضبط المسافة من اليمين */
+    }
+
+    .package-list {
+        margin-bottom: 50px;
+        /* إضافة مسافة أسفل قائمة الباقات */
+    }
+
+    .package-list>li:not(:last-child) {
+        margin-bottom: 40px;
+        /* إضافة مسافة بين عناصر قائمة الباقات */
+    }
+
+    .package-card {
+        display: grid;
+        /* ترتيب بطاقات الباقات في شبكة */
+        grid-template-columns: 1.3fr 1.5fr 1fr;
+        /* توزيع الأعمدة */
+    }
+
+    .package-card .card-banner {
+        height: 100%;
+        /* جعل البانر يأخذ الارتفاع الكامل */
+    }
+
+    .package-card .card-content {
+        padding: 40px;
+        /* ضبط الحواف الداخلية */
+    }
+
+    .package-card .card-price {
+        display: grid;
+        /* استخدام الشبكة لعرض السعر */
+        place-content: center;
+        /* توسيط المحتوى */
+    }
+
+    .package-card .card-price .wrapper {
+        margin-bottom: 15px;
+        /* ضبط المسافة السفلية */
+    }
+
+    .gallery {
+        padding-bottom: calc(var(--section-padding * 2));
+        /* ضبط التباعد السفلي */
+    }
+
+    .gallery-list {
+        grid-template-columns: repeat(3, 1fr);
+        /* عرض 3 صور في كل صف */
+        gap: 20px;
+        /* تحديد المسافة بين الصور */
+    }
+
+    .gallery-image {
+        border-radius: var(--radius-25);
+        /* جعل زوايا الصور دائرية */
+    }
+}
+
+/* شاشات بعرض 992 بكسل فأكثر */
+@media (min-width: 992px) {
+    .container {
+        max-width: 1050px;
+        /* زيادة الحد الأقصى لعرض الحاوية */
+    }
+
+    .header.active .header-top {
+        position: unset;
+        /* إلغاء التموضع الافتراضي */
+        background: unset;
+        /* إزالة الخلفية */
+    }
+
+    .nav-open-btn,
+    .navbar-top {
+        display: none;
+        /* إخفاء زر فتح القائمة */
+    }
+
+    .header-bottom {
+        border-bottom: none;
+        /* إزالة الحد السفلي للهيدر */
+    }
+
+    .header.active .header-bottom {
+        position: fixed;
+        /* جعل الهيدر ثابت عند التمرير */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        /* تغيير الخلفية */
+        color: var(--onyx);
+        /* تغيير اللون */
+        box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.08);
+        /* إضافة ظل */
+        transition: var(--transition);
+        /* تفعيل تأثير الانتقال */
+    }
+
+    .header-bottom .container {
+        padding-block: 0;
+        /* إزالة الحواف العلوية والسفلية */
+    }
+
+    .header .navbar {
+        all: unset;
+        /* إعادة تعيين جميع القيم الافتراضية */
+    }
+
+    .navbar-list {
+        border-top: none;
+        /* إزالة الحد العلوي */
+        display: flex;
+        /* عرض القائمة أفقياً */
+        justify-content: center;
+        /* توسيط العناصر */
+        align-items: center;
+        /* توسيط عمودي */
+    }
+
+    .navbar-link {
+        color: var(--white);
+        /* تغيير لون الروابط */
+        --fs-4: 16px;
+        font-weight: unset;
+        text-transform: uppercase;
+        /* جعل النصوص بأحرف كبيرة */
+        padding: 20px 15px;
+        /* ضبط التباعد الداخلي */
+    }
+
+    .header.active .navbar-link {
+        color: var(--onyx);
+        /* تغيير لون الروابط عند تفعيل الهيدر */
+    }
+
+    .header.active .navbar-link:is(:hover, :focus) {
+        color: var(--bright-navy-blue);
+        /* تغيير اللون عند التمرير */
+    }
+
+    .header.active .social-link {
+        color: var(--onyx);
+        border-color: hsla(0, 0%, 0%, 0.15);
+        /* تغيير لون الحدود */
+    }
+
+    .overlay {
+        display: none;
+        /* إخفاء طبقة التعتيم */
+    }
+
+    .hero .container {
+        max-width: 740px;
+        /* ضبط عرض محتوى قسم البطل */
+    }
+
+    .popular-list {
+        grid-template-columns: repeat(3, 1fr);
+        /* عرض 3 أعمدة */
+    }
+
+    .meta-box {
+        --fs-8: 13px;
+    }
+
+    .meta-box>ion-icon {
+        font-size: 15px;
+    }
+}
+
+/* شاشات بعرض 1200 بكسل فأكثر */
+@media (min-width: 1200px) {
+    :root {
+        --section-padding: 100px;
+        /* زيادة المسافة بين الأقسام */
+    }
+
+    .container {
+        max-width: 1180px;
+        /* ضبط الحد الأقصى للعرض */
+    }
+}

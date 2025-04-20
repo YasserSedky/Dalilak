@@ -1,0 +1,135 @@
+* { 
+    padding: 0; /* إزالة التباعد الداخلي لجميع العناصر */
+    margin: 0; /* إزالة الهوامش الخارجية لجميع العناصر */
+    font-family: sans-serif; /* تعيين الخط لجميع العناصر */
+    box-sizing: border-box; /* تضمين الحواف والحدود ضمن الأبعاد */
+    color: #fff; /* تعيين لون الخط إلى أبيض */
+}
+
+body{
+    background-image: url('Weather.jpg'); /* ضع مسار الصورة هنا */
+  background-size: cover; /* تجعل الصورة تغطي كامل الشاشة */
+  background-position: center; /* تجعل الصورة في منتصف الشاشة */
+  background-repeat: no-repeat; /* تمنع تكرار الصورة */
+}
+
+#container {
+    height: 100vh; /* ارتفاع الحاوية بارتفاع الشاشة بالكامل */
+    width: 100%; /* عرض الحاوية بكامل عرض الصفحة */
+    position: relative; /* تحديد موضع نسبي للعناصر بداخله */
+    display: flex; /* استخدام flex لتوزيع العناصر داخله */
+}
+
+#container #location {
+    height: 60px; /* تعيين ارتفاع للموقع */
+    width: 100%; /* عرض كامل */
+    position: absolute; /* تموضع مطلق داخل الحاوية */
+    left: 0%; /* محاذاة لليسار */
+    top: 11%; /* إزاحة للأسفل بنسبة 11% من الأعلى */
+    display: flex; /* توزيع العناصر داخله باستخدام flex */
+    justify-content: center; /* توسيط العناصر أفقياً */
+    flex-direction: row; /* ترتيب العناصر بشكل أفقي */
+}
+
+#container input {
+    height: 50px; /* ارتفاع الحقل */
+    width: 300px; /* عرض الحقل */
+    margin: 0px 20px; /* هوامش أفقية بين الحقول */
+    padding: 0 20px; /* تباعد داخلي أفقي */
+    left: 0%; /* محاذاة لليسار */
+    border: none; /* بدون حدود */
+    outline: none; /* إزالة الإطار عند التحديد */
+    background: white; /* لون الخلفية أبيض */
+    font-size: 20px; /* حجم الخط */
+    color: black; /* لون النص داخل الحقل */
+}
+
+#container input::placeholder {
+    color: #000000d0; /* لون نص التلميح داخل الحقل */
+}
+
+#container input[type="submit"] {
+    cursor: pointer; /* تغيير المؤشر عند المرور */
+    width: 150px; /* عرض الزر */
+    background: #000000d0; /* لون خلفية داكن شفاف */
+    color: white; /* لون الخط أبيض */
+    font-weight: 700; /* وزن الخط عريض */
+    font-size: 22px; /* حجم الخط */
+}
+
+#tempIcon {
+    height: 150px; /* ارتفاع الأيقونة */
+    width: 150px; /* عرض الأيقونة */
+    position: absolute; /* تموضع مطلق داخل الحاوية */
+    top: 35%; /* إزاحة للأسفل بنسبة 35% */
+    left: 60%; /* إزاحة من اليسار بنسبة 60% */
+}
+
+#weatherCountry {
+    font-size: 40px; /* حجم خط اسم الدولة */
+    position: absolute; /* تموضع مطلق */
+    top: 37%; /* إزاحة من الأعلى */
+    margin-left: auto; /* محاذاة تلقائية لليسار */
+    margin-right: 20%; /* هوامش من اليمين */
+}
+
+#temperature {
+    font-size: 45px; /* حجم الخط للحرارة */
+    position: absolute; /* تموضع مطلق */
+    top: 45%; /* موضع من الأعلى */
+    left: 37%; /* موضع من اليسار */
+}
+
+#temperature b {
+    color: red; /* تمييز الرقم داخل درجة الحرارة باللون الأحمر */
+}
+
+#weatherDescription {
+    font-size: 20px; /* حجم الخط للوصف */
+    text-transform: capitalize; /* أول حرف من كل كلمة بحرف كبير */
+    position: absolute; /* تموضع مطلق */
+    bottom: 38%; /* مسافة من الأسفل */
+    left: 60%; /* إزاحة من اليسار */
+}
+
+#container ul {
+    position: absolute; /* تموضع مطلق */
+    bottom: 17%; /* إزاحة من الأسفل */
+    left: auto; /* تلقائي */
+    right: auto; /* تلقائي */
+    margin-right: 20%; /* هوامش من اليمين */
+}
+
+#container ul li {
+    font-size: 20px; /* حجم الخط */
+    margin: 20px 0; /* هوامش عمودية بين العناصر */
+    list-style-type: none; /* إزالة الرمز من القائمة */
+    margin-right: 5rem; /* هامش يمين */
+}
+
+.features {
+    justify-content: center; /* توسيط العناصر أفقياً */
+}
+
+.flex {
+    background: #000000d0; /* خلفية داكنة شفافة */
+    color: white; /* لون الخط أبيض */
+    padding: 2em; /* تباعد داخلي */
+    border-radius: 30px; /* تدوير الحواف */
+    width: 100%; /* عرض كامل */
+    max-width: 700px; /* أقصى عرض 700px */
+    height: 30rem; /* ارتفاع محدد */
+    margin: 1em; /* تباعد خارجي */
+    margin-top: 14rem; /* تباعد علوي كبير */
+    margin-left: auto; /* محاذاة تلقائية لليسار */
+    margin-right: auto; /* محاذاة تلقائية لليمين */
+    display: flex; /* توزيع داخلي مرن */
+    justify-content: center; /* توسيط المحتوى أفقياً */
+}
+
+.h1 {
+    margin-left: 28rem; /* إزاحة لليسار */
+    margin-top: 25rem; /* إزاحة للأسفل */
+    font-size: 1.5rem; /* حجم الخط */
+    font-family: "myFirstFont"; /* استخدام خط مخصص */
+}
